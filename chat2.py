@@ -38,11 +38,11 @@ class MainWindow(CTk):
         self.current_theme = "Light"
         set_appearance_mode(self.current_theme)
         self.sock = None
-        self.username = "Marcbv"
+        self.username = "Максим"
 
         try:
             self.sock = socket(AF_INET, SOCK_STREAM)
-            self.sock.connect(('0.tcp.eu.ngrok.io', 13572))
+            self.sock.connect(('4.tcp.eu.ngrok.io', 18532))
             threading.Thread(target=self.receive_messages, daemon=True).start()
             self.send_system_message(f"{self.username}приєднався(лась) до чату")
         except Exception as e:
